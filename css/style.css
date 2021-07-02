@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+body {
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px 0;
+}
+
+#allUsers {
+  padding: 0 30px;
+}
+
+table {
+  width: 100%;
+  border: 2px solid;
+  margin-bottom: 50px;
+}
+#userId {
+  border-right: 2px solid;
+  text-align: center;
+}
+
+#username,
+#nameTh {
+  padding-left: 10px;
+}
+
+tr {
+  border-bottom: 2px solid;
+  padding-left: 10px;
+}
+
+tr:hover {
+  background-color: skyblue;
+}
+
+#userButton {
+  text-align: center;
+}
+
+#userPosts {
+  padding: 65px;
+}
+
+#userPost {
+  padding-top: 20px;
+}
+
+#closeButton {
+  margin: auto;
+}
