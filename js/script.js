@@ -1,12 +1,14 @@
 let allUsers = [];
 let usersPosts = [];
 closebutton = document.querySelector('#closeButton');
+backToTopButton = document.querySelector('#backToTop');
 
 window.addEventListener('load', () => {
   divUsers = document.querySelector('#allUsers');
   divUserPosts = document.querySelector('#userPosts');
 
   closebutton.style.display = 'none';
+  backToTopButton.style.display = 'none';
 
   getUsers();
 });
@@ -14,6 +16,7 @@ window.addEventListener('load', () => {
 closebutton.addEventListener('click', () => {
   closebutton = document.querySelector('#closeButton').style.display = 'none';
   divUserPosts.style.display = 'none';
+  backToTopButton.style.display = 'none';
 });
 
 async function getUsers() {
@@ -99,19 +102,21 @@ async function getUsers() {
                 <li class="list-group-item list-group-item-primary" id="postUserId">User Id: ${element.userId}</li>
               </div>
                   <div>
-                  <li class="list-group-item list-group-item-dark" id="userPostId">Post #:${element.id}</li>
+                  <li class="list-group-item list-group-item-secondary" id="userPostId">Post #:${element.id}</li>
                   </div>
                   <div>
-                  <li class="list-group-item list-group-item-dark" id="userPostTitle">Title: ${element.title}</li>
+                  <li class="list-group-item list-group-item-secondary" id="userPostTitle">Title: ${element.title}</li>
                   </div>
                   <div>
-                  <li class="list-group-item list-group-item-dark" id="userPostBody">Text: ${element.body}</li>
+                  <li class="list-group-item list-group-item-secondary" id="userPostBody">Text: ${element.body}</li>
                   </div>
                 `;
           postsHTML += postHTML;
 
           divUserPosts.innerHTML = postsHTML;
         });
+
+        backToTopButton.style.display = 'block';
       }
     );
   });
