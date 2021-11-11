@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Roboto Mono', monospace;
 }
@@ -51,4 +55,9 @@ tr:hover {
 
 #closeButton {
   margin: auto;
+}
+
+#backToTop {
+  margin: auto;
+  margin-bottom: 20px;
 }
